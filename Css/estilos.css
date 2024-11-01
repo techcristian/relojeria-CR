@@ -72,8 +72,8 @@ body{
 }
 
 .navegacion a:hover{
-  background-color: rgb(7, 108, 103);
-  color: rgb(242, 255, 0);
+  background-color:white;
+  color: rgba(2, 42, 40, 0.988); 
 }
 .icono {
   display: none;
@@ -81,11 +81,11 @@ body{
 /*main*/
 main{
   background-color: rgb(7, 108, 103);
-  height: 45rem;
-  padding-bottom: 10rem;
+  height: 40rem;
+  padding-bottom: 2rem;
 }
 
-section h2{
+.presentacion h2{
   font-family: var(--titulos);
   color: white;
   text-align: center;
@@ -128,16 +128,14 @@ section h2{
   font-size: 2rem;
   margin: 0 0.5rem;
   transition:color 0.3s ease-in-out;
-  animation: carrito 4s ease-in-out;
+  animation: carrito 10s ease-in-out;
 }
 @keyframes carrito {
   0%{
-    transform: translateY(70%);
     opacity: 0;
   }
   100%{
-    transform: translateY(0%);
-    opacity: 1;
+   opacity: 1;
   }
 }
 .material-symbols-outlined:hover{
@@ -151,16 +149,32 @@ section h2{
   color: white;
   position: relative;
 }
+.marcas, .video{
+  flex: 0 0 calc(50%-1);
+}
 
-ul{
- position:absolute;
- top: 15px;
- left: -10px;
- display: block;
- background-color: rgba(2, 42, 40, 0.988);
- padding: 2.3rem;
- margin: 0 1rem;
- animation: desplazamiento-ul 5s ease-in-out;
+.marcas{
+position:relative;
+background-image: url('../imgs/pexels-rubaitulazad-10414755.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+top: 0px;
+left: -10px;
+display: block;
+padding: 2.5rem;
+margin: 0 1rem;
+animation: desplazamiento-ul 5s ease-in-out;
+z-index: 1;
+}
+.marcas::before{
+  content:'';
+  position:absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  background-color:rgba(0, 0,0,0.5);
+  z-index:-1;
 }
 @keyframes desplazamiento-ul{
   0%{
@@ -173,7 +187,7 @@ ul{
   }
 }
 
-ul a{
+.marcas a{
   display: block;
   font-family: var(--parrafos);
   font-size: 1.1rem;
@@ -184,9 +198,9 @@ ul a{
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
 }
-ul a:hover{
-  background-color:rgb(7, 108, 103);
-  color: rgb(242, 255, 0);
+.marcas a:hover{
+  background-color:white;
+  color: rgba(2, 42, 40, 0.988); 
 }
 ul h3{
   text-align: center;
@@ -197,9 +211,236 @@ hr{
   opacity: 0.5;
   margin-bottom: 1rem;
 }
-img{
- width: 20%;
- height:auto;
+
+/* Formas de Pago */
+
+#formas-pago {
+  background-color: rgb(7, 108, 103);
+  text-align: center;
+
+}
+#formas-pago h2 {
+  padding-top: 1rem;
+  font-size: 2rem;
+  color:white;
+
+}
+.metodos-pago {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 2rem;
+ 
+}
+.metodo {
+  font-size: 1.2rem;
+  padding: 0.8rem 1.8rem;
+  background-color:rgba(2, 42, 40, 0.988);
+  color: white;
+  border-radius: .2rem;
+  transition: background-color 0.3s ease-in-out;
+}
+.metodo:hover {
+  background-color:white;
+  color: rgba(2, 42, 40, 0.988); 
+
+}
+
+/* Formulario de Contacto */
+#contacto {
+  padding: 1.8rem;
+  background-image: url('../imgs/reloj-casio1.webp');
+  background-size: cover;
+  background-position: center center;
+}
+#contacto h2{
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+.contenedor-form{
+display: flex;
+
+}
+.formulario-contacto, #mapa {
+  flex:0 0 calc(50%-1rem);
+
+}
+.formulario-contacto{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 15rem;
+}
+.formulario-contacto h3{
+  color: white;
+  margin-top: 1.6rem;
+
+}
+form {
+  opacity: 1;
+  width:20rem;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 2rem;
+ 
+}
+
+input, textarea {
+  padding: .8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline:none;
+  resize: none;
+}
+
+button {
+  padding: .8rem;
+  background-color: rgba(2, 42, 40, 0.988);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  outline:none;
+}
+#mapa{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 7rem;
+}
+ #mapa iframe {
+  width: 100%;
+ border: none;
+  border-radius: 5px;
+}
+#mapa h3{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: white;
+}
+
+/* Tarjetas de Productos */
+#productos {
+ padding:2rem 0;
+ background-color: rgb(7, 108, 103);
+}
+#productos h2{
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+ padding: 2rem 0;
+}
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  width: 18rem;
+  padding: 1.2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.tarjeta h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.tarjeta p {
+  color: #666;
+}
+button[type="submit"]{
+  margin-top: .8rem;
+}
+button:hover[type="submit"]{
+  background-color:white;
+  color: rgba(2, 42, 40, 0.988); 
+}
+/*pie pagina*/
+.pie-pagina{
+  background-image: url('../imgs/reloj-casio1.webp');
+  background-size: cover;
+  background-position: center center;
+  color:white;
+ padding-top: 1rem;
+}
+.contenedor-pie{
+  display: flex;
+  justify-content: space-between;
+}
+
+.info{
+  flex: 0 0 calc(25% - 1rem);
+}
+.info input{
+  display: block;
+}
+.info input[type="email"]{
+  outline:none;
+  width: 100%;
+  padding: .8rem 1rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+.info form input[type="submit"]{
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background-color:rgba(2, 42, 40, 0.988);
+  color: white;
+  
+}
+.info form input:hover[type="submit"]{
+  background-color:white;
+  color: rgba(2, 42, 40, 0.988); 
+
+}
+.redes a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  
+} 
+.facebook {
+  color: blue;
+  font-size: 2.5rem;
+}
+.instagram{
+  color: rgb(255, 0, 111);
+  font-size: 2.5rem;
+}
+.twitter{
+text-decoration: none;
+  color: rgb(244, 246, 246);
+  font-size: 2.5rem;
+}
+
+/*footer*/
+.footer{
+  background-color: rgb(7, 108, 103);
+  color: white;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
 }
 
 }

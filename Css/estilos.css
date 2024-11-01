@@ -20,12 +20,6 @@ body{
   box-sizing: inherit;
 }
 
-.contenedor{
-  max-width: 120rem;
-  margin: 0 auto;
-  width:95%;
-}
-
 @media(min-width:768px){
   .contenedor-navegacion{
     position:relative;
@@ -145,6 +139,7 @@ main{
   .comprar a .material-symbols-outlined:hover{
     color: white;
   }
+
 .contenido-imagen-video{
   display: flex;
   justify-content: space-around;
@@ -155,6 +150,11 @@ main{
 .marcas, .video{
   flex: 0 0 calc(50%-1);
 }
+.video video {
+  width: 100%; 
+  height: auto; 
+}
+
 
 .marcas{
 position:relative;
@@ -490,9 +490,7 @@ button:hover[type="submit"]{
     color: white;
     text-decoration: none;
   }
-.presentacion{
-  width: 100%;
-}
+
 .presentacion h2{
   font-family: var(--titulos);
   color: white;
@@ -543,25 +541,25 @@ button:hover[type="submit"]{
   font-size: 2rem;
 }
   /* Main */
-  main {
+ main {
     padding: 2rem 1rem;
     background-color: rgb(7, 108, 103);
   }
 
-  .presentacion h2 {
+ .presentacion h2 {
     font-size: 2rem;
     padding-top: 2rem;
     color: white;
   }
 
-  /* Comprar */
-  .comprar {
+/* Comprar */
+.comprar {
     flex-direction: column;
     text-align: center;
     padding: 1rem;
   }
 
-  .comprar h3 {
+.comprar h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     color: white;
@@ -578,54 +576,62 @@ button:hover[type="submit"]{
   box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.45);
   transition: background-color 0.5s ease-in-out;
   }
-  .comprar .icon:hover{
+.comprar .icon:hover{
     background-color:rgba(2, 42, 40, 0.988) ;
     color: white;
   }
-  .comprar a .material-symbols-outlined{
+.comprar a .material-symbols-outlined{
     color: rgba(2, 42, 40, 0.988);
     font-size: 2rem;
   } 
-  .comprar a .material-symbols-outlined:hover{
+.comprar a .material-symbols-outlined:hover{
     color: white;
   }
-  /* Sección de Imágenes y Videos */
-  .contenido-imagen-video {
+/* Sección de Imágenes y Videos */
+/*.contenido-imagen-video {
     flex-direction: column;
     padding: 1rem;
     color: white;
   }
 
-  .marcas, .video {
+.marcas, .video {
     width: auto;
     background-size: cover;
     margin: 1rem 0;
     padding: 1.5rem;
     color: white;
+  }*/
+  .contenedor-imagen-video {
+    flex-direction: row;
   }
 
-  .marcas {
+.marcas, .video {
+    flex: 1; /* Compartir el espacio entre marcas y video en tabletas y más grande */
+  }
+
+  .video video {
+    width: 100%; /* Mantener el video a tamaño completo en pantalla grande */
+    max-width: 500px; /* Limitar el ancho máximo del video */
+  }
+
+.marcas {
     background-image: url('../imgs/pexels-rubaitulazad-10414755.jpg');
     background-color: rgba(0, 0, 0, 0.5); 
     text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
-
-  .marcas h3 {
+.marcas h3 {
     margin-bottom: 1rem;
     color: white;
   }
-
-  .marcas a {
+ .marcas a {
     color: rgb(251, 252, 253);
     font-size: 1rem;
     padding: 0.5rem 1rem;
     display: inline-block;
   }
-  .video{
-    display: flex;
-    justify-content: center;
-   
-  }
+
 /* Formas de Pago */
 #formas-pago {
   background-color: rgb(7, 108, 103);

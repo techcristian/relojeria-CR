@@ -457,7 +457,6 @@ button:hover[type="submit"]{
 
   .contenido-navegacion {
     display: flex;
- 
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
@@ -491,7 +490,9 @@ button:hover[type="submit"]{
     color: white;
     text-decoration: none;
   }
-
+.presentacion{
+  width: 100%;
+}
 .presentacion h2{
   font-family: var(--titulos);
   color: white;

@@ -75,9 +75,7 @@ body{
   background-color:white;
   color: rgba(2, 42, 40, 0.988); 
 }
-.icono {
-  display: none;
-}
+
 /*main*/
 main{
   background-color: rgb(7, 108, 103);
@@ -123,25 +121,30 @@ main{
     opacity: 1;
   }
 }
-.material-symbols-outlined{
-  color: rgb(242, 255, 0);
-  font-size: 2rem;
-  margin: 0 0.5rem;
-  transition:color 0.3s ease-in-out;
-  animation: carrito 10s ease-in-out;
-}
-@keyframes carrito {
-  0%{
-    opacity: 0;
+.comprar .icon{
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  font-size: 3rem;
+  background-color: white;
+  box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.45);
+  transition: background-color 0.5s ease-in-out;
+  margin-left: 0.3rem;
   }
-  100%{
-   opacity: 1;
+  .comprar .icon:hover{
+    background-color:rgba(2, 42, 40, 0.988) ;
+    color: white;
   }
-}
-.material-symbols-outlined:hover{
-  color: rgb(64, 255, 0);
-  font-size: 2rem;
-}
+  .comprar a .material-symbols-outlined{
+    color: rgba(2, 42, 40, 0.988);
+    font-size: 1.6rem;
+  } 
+  .comprar a .material-symbols-outlined:hover{
+    color: white;
+  }
 .contenido-imagen-video{
   display: flex;
   justify-content: space-around;
@@ -216,10 +219,11 @@ hr{
 
 #formas-pago {
   background-color: rgb(7, 108, 103);
-  text-align: center;
+
 
 }
 #formas-pago h2 {
+  text-align: center;
   padding-top: 1rem;
   font-size: 2rem;
   color:white;
@@ -245,7 +249,6 @@ hr{
   color: rgba(2, 42, 40, 0.988); 
 
 }
-
 /* Formulario de Contacto */
 #contacto {
   padding: 1.8rem;
@@ -261,11 +264,9 @@ hr{
 }
 .contenedor-form{
 display: flex;
-
 }
 .formulario-contacto, #mapa {
   flex:0 0 calc(50%-1rem);
-
 }
 .formulario-contacto{
   display:flex;
@@ -287,9 +288,7 @@ form {
   flex-direction: column;
   gap: 0.7rem;
   padding: 2rem;
- 
 }
-
 input, textarea {
   padding: .8rem;
   border: 1px solid #ccc;
@@ -297,7 +296,6 @@ input, textarea {
   outline:none;
   resize: none;
 }
-
 button {
   padding: .8rem;
   background-color: rgba(2, 42, 40, 0.988);
@@ -412,6 +410,9 @@ button:hover[type="submit"]{
   color: rgba(2, 42, 40, 0.988); 
 
 }
+.redes h3{
+  text-align: center;
+}
 .redes a {
   display: flex;
   justify-content: center;
@@ -429,8 +430,7 @@ button:hover[type="submit"]{
   font-size: 2.5rem;
 }
 .twitter{
-text-decoration: none;
-  color: rgb(244, 246, 246);
+  color: rgb(248, 247, 248);
   font-size: 2.5rem;
 }
 
@@ -444,3 +444,414 @@ text-decoration: none;
 }
 
 }
+/* CSS Responsive para Móviles */
+@media (max-width: 768px) {
+   /* Contenedor de Navegación */
+   .contenedor-navegacion {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(2, 42, 40, 0.988);
+    z-index: 10;
+  }
+
+  .contenido-navegacion {
+    display: flex;
+ 
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    color: var(--blanco);
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .logo img {
+    width: 25%;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  .logo h1{
+    margin-left: 2rem;
+  }
+  .icono{
+    display: unset;
+    color: white;
+    font-size: 2rem;
+  }
+  .navegacion a {
+    display: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+
+.presentacion h2{
+  font-family: var(--titulos);
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top:5rem;
+  animation:titulo-h2 5s ease-in-out;
+}
+@keyframes titulo-h2 {
+  0%{
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100%{
+    transform:translateY(0%);
+    opacity: 1;
+  }
+}
+.comprar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comprar h3{
+  font-size: 1.2rem;
+  color: white;
+  animation: elegir 5s ease-in-out;
+}
+@keyframes elegir {
+  0%{
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.icono .material-symbols-outlined{
+  color: rgb(242, 255, 0);
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  transition:color 0.3s ease-in-out;
+}
+
+ .icono .material-symbols-outlined:hover{
+  color: rgb(64, 255, 0);
+  font-size: 2rem;
+}
+  /* Main */
+  main {
+    padding: 2rem 1rem;
+    background-color: rgb(7, 108, 103);
+  }
+
+  .presentacion h2 {
+    font-size: 2rem;
+    padding-top: 2rem;
+    color: white;
+  }
+
+  /* Comprar */
+  .comprar {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .comprar h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+.comprar .icon{
+  width:4rem;
+  height:4rem;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  font-size: 3rem;
+  background-color: white;
+  box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.45);
+  transition: background-color 0.5s ease-in-out;
+  }
+  .comprar .icon:hover{
+    background-color:rgba(2, 42, 40, 0.988) ;
+    color: white;
+  }
+  .comprar a .material-symbols-outlined{
+    color: rgba(2, 42, 40, 0.988);
+    font-size: 2rem;
+  } 
+  .comprar a .material-symbols-outlined:hover{
+    color: white;
+  }
+  /* Sección de Imágenes y Videos */
+  .contenido-imagen-video {
+    flex-direction: column;
+    padding: 1rem;
+    color: white;
+  }
+
+  .marcas, .video {
+    width: auto;
+    background-size: cover;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    color: white;
+  }
+
+  .marcas {
+    background-image: url('../imgs/pexels-rubaitulazad-10414755.jpg');
+    background-color: rgba(0, 0, 0, 0.5); 
+    text-align: center;
+  }
+
+  .marcas h3 {
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .marcas a {
+    color: rgb(251, 252, 253);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+  }
+  .video{
+    display: flex;
+    justify-content: center;
+   
+  }
+/* Formas de Pago */
+#formas-pago {
+  background-color: rgb(7, 108, 103);
+
+}
+#formas-pago h2 {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 2rem;
+  color:white;
+
+}
+.metodos-pago {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 2rem;
+ 
+}
+.metodo {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.8rem 1.8rem;
+  background-color:rgba(2, 42, 40, 0.988);
+  color: white;
+  border-radius: .2rem;
+  transition: background-color 0.3s ease-in-out;
+}
+.metodo:hover {
+  background-color:white;
+  color: rgba(2, 42, 40, 0.988); 
+
+}
+ 
+  /* Formulario de Contacto */
+  #contacto {
+    padding: 1.5rem;
+    background-image: url('../imgs/reloj-casio1.webp');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+  }
+
+  .contenedor-form {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .formulario-contacto, #mapa {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .formulario-contacto h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgba(2, 42, 40, 0.988);
+    color: white;
+    font-size: 1rem;
+  }
+  button[type="submit"]{
+    margin-top: .8rem;
+  }
+  button:hover[type="submit"]{
+    background-color:white;
+    color: rgba(2, 42, 40, 0.988); 
+  }
+  #mapa {
+    margin-left: 0;
+    width: 100%;
+    color: white;
+  }
+  #mapa h3{
+  margin-bottom: 1rem;
+  }
+  /* Tarjetas de Productos */
+  #productos {
+    padding: 2rem 1rem;
+    background-color: rgb(7, 108, 103);
+  }
+  #productos h2{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+   padding: 2rem 0;
+  }
+  .tarjetas {
+    flex-direction: column;
+  
+  }
+  .tarjeta {
+    width: 100%;
+    background-size: cover;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .tarjeta img{
+    width: 100%;
+  }
+
+  .tarjeta h3 {
+    color: #333;
+  }
+
+  .tarjeta p {
+    color: #666;
+  }
+
+  /* Pie de Página */
+  .pie-pagina {
+    padding: 1.5rem;
+    background-image: url('../imgs/reloj-casio1.webp');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+  }
+
+  .contenedor-pie {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  /*info redes*/
+  .redes{
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+.redes h3{
+  text-align: center;
+}
+  .facebook {
+    color: blue;
+    font-size: 2.5rem;
+    margin: 1rem;
+  }
+  .instagram{
+    color: rgb(255, 0, 111);
+    font-size: 2.5rem;
+  }
+  .twitter{
+    color: rgb(248, 247, 248);
+    font-size: 2.5rem;
+  }
+  .contenedor-pie .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+  .contenedor-pie .info .suscripcion{
+    text-align: center;
+  }
+  .info{
+    display: flex;
+    flex-direction: column;
+  }
+  .info h3{
+    margin-bottom: 0.7rem;
+  }
+  .info form{
+    margin-top: 1rem;
+  }
+  .info form input{
+    outline: none;
+    margin-top: 0.8rem;
+  }
+  .info form input[type="email"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .info form input[type="submit"] {
+    background-color: rgba(2, 42, 40, 0.988);
+    color: white;
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    
+  }
+  .info form input:hover[type="submit"]{
+    background-color: white;
+    color: rgba(2, 42, 40, 0.988);
+  }
+/*footer*/
+.footer {
+    background-color: rgb(7, 108, 103);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer p{
+    text-align: center;
+  }
+
+}
+
+
+

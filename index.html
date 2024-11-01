@@ -20,6 +20,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart_checkout"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add_shopping_cart"
+    />
     <!--iconos-->
     <script src="https://unpkg.com/akar-icons-fonts"></script>
     <!--Css Externo-->
@@ -42,7 +50,7 @@
             <a href="#pie-pagina">Redes</a>
           </nav>
           <div class="icono">
-            <span class="material-symbols-outlined">menu</span>
+            <span class="material-symbols-outlined"></span>
           </div>
         </div>
       </div>
@@ -52,13 +60,15 @@
         <h2>Te acompañamos a encontar el mejor reloj!</h2>
         <div class="comprar">
           <h3>Elige tu proximo reloj aqui ..</h3>
-          <a href="productos.html" target="_blank"
-            ><span class="material-symbols-outlined">
-              shopping_cart_checkout
-            </span></a
-          >
+          <div class="icon">
+            <a href="#productos" target="_blank"
+              ><span class="material-symbols-outlined">
+                add_shopping_cart
+              </span></a
+            >
+          </div>
         </div>
-        <div class="contenedor-imagen-video contenedor">
+        <div class="contenedor-imagen-video">
           <div class="contenido-imagen-video">
             <ul class="marcas">
               <h3>Saber más sobre</h3>
@@ -75,7 +85,7 @@
               <a
                 href="https://www.cartier.com/en-us/watches/collections/"
                 target="_blank"
-                >Cartier</a
+                >Seiko</a
               >
               <a href="https://citizen.es/" target="_blank">Citizen</a>
               <a href="https://www.gucci.com/gr/en_gb/" target="_blank"
@@ -179,20 +189,37 @@
           <p>$120.000</p>
           <button type="submit">Comprar</button>
         </div>
+        <div class="tarjeta">
+          <img src="imgs/reloj-seiko1.webp" alt="Reloj 1" />
+          <h3>Seiko Clásico</h3>
+          <p>$60.000</p>
+          <button type="submit">Comprar</button>
+        </div>
+        <div class="tarjeta">
+          <img src="imgs/reloj-seiko2.webp" alt="Reloj 2" />
+          <h3>Seiko Deportivo</h3>
+          <p>$70.000</p>
+          <button type="submit">Comprar</button>
+        </div>
+        <div class="tarjeta">
+          <img src="imgs/reloj-seiko3.webp" alt="Reloj 3" />
+          <h3>Seiko de Lujo</h3>
+          <p>$120.000</p>
+          <button type="submit">Comprar</button>
+        </div>
       </div>
     </section>
 
     <!--pie de pagina-->
     <div class="pie-pagina" id="pie-pagina">
-      <div class="contenedor-pie contenedor">
+      <div class="contenedor-pie">
         <div class="info">
           <div class="redes">
             <h3>Seguinos en nuestras redes sociales</h3>
-
             <ul>
               <a href="https://x.com/?lang=es" target="_blank" class="twitter"
-              >X</a
-            >
+                ><ion-icon name="logo-twitter"></ion-icon></a
+              >
               <a
                 href="https://www.facebook.com/?locale=es_LA"
                 target="_blank"
@@ -205,7 +232,6 @@
                 class="instagram"
                 ><ion-icon name="logo-instagram"></ion-icon
               ></a>
-             
             </ul>
           </div>
         </div>
@@ -218,9 +244,10 @@
           <p>Lunes a Sabado 9am - 20pm</p>
         </div>
         <div class="info">
-          <h3>Noticias</h3>
-          <p>suscribete para recibir novedades</p>
-      
+          <div class="suscripcion">
+            <h3>Noticias</h3>
+            <p>suscribete para recibir novedades</p>
+
             <form action="https://formspree.io/f/xanyenge" method="POST">
               <input
                 type="text"
@@ -236,7 +263,7 @@
               />
               <input type="submit" value="Suscribirse" />
             </form>
-        
+          </div>
         </div>
       </div>
     </div>

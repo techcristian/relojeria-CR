@@ -154,8 +154,6 @@ main{
   width: 100%; 
   height: auto; 
 }
-
-
 .marcas{
 position:relative;
 background-image: url('../imgs/pexels-rubaitulazad-10414755.jpg');
@@ -588,31 +586,18 @@ button:hover[type="submit"]{
     color: white;
   }
 /* Sección de Imágenes y Videos */
-/*.contenido-imagen-video {
-    flex-direction: column;
-    padding: 1rem;
-    color: white;
-  }
 
-.marcas, .video {
-    width: auto;
-    background-size: cover;
-    margin: 1rem 0;
-    padding: 1.5rem;
-    color: white;
-  }*/
   .contenedor-imagen-video {
     flex-direction: row;
   }
 
 .marcas, .video {
-    flex: 1; /* Compartir el espacio entre marcas y video en tabletas y más grande */
+    flex: 1; 
   }
-
-  .video video {
-    width: 100%; /* Mantener el video a tamaño completo en pantalla grande */
-    max-width: 500px; /* Limitar el ancho máximo del video */
-  }
+.video video {
+  width: 100%; 
+  max-width: 500px; 
+}
 
 .marcas {
     background-image: url('../imgs/pexels-rubaitulazad-10414755.jpg');
@@ -622,13 +607,13 @@ button:hover[type="submit"]{
     margin-bottom: 2rem;
   }
 .marcas h3 {
-    margin-bottom: 1rem;
+  padding: 1rem 0;
     color: white;
   }
  .marcas a {
     color: rgb(251, 252, 253);
     font-size: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     display: inline-block;
   }
 

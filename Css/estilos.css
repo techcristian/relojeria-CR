@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 :root{
   --titulos:"Arima",cursiva;
-
+  --blanco: white;
 }
 *{
   margin:0; /*Resetamos los margin y padding por default del navegador*/
@@ -459,6 +459,7 @@ button:hover[type="submit"]{
     align-items: center;
     padding: 1rem;
     color: var(--blanco);
+    height: 7rem;
   }
   .navegacion{
     position:absolute;

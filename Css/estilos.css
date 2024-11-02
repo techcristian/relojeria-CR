@@ -469,7 +469,7 @@ button:hover[type="submit"]{
   .navegacion a{
     display: inline;
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: .2rem .2rem;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;

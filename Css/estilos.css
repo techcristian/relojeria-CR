@@ -19,7 +19,22 @@ body{
 *, *::after, * ::before{
   box-sizing: inherit;
 }
-
+/*generales*/
+button{
+  width: 100%;
+  padding: 0.8rem;
+  background-color: rgba(2, 42, 40, 0.988);
+  color: rgb(253, 252, 252);
+  font-size: 1rem;
+}
+.rating{
+  font-size: 1.5rem;
+  color: white;
+}
+.amarillo{
+  color: rgb(219, 219, 5);
+  font-size: 1.5rem;
+}
 @media(min-width:768px){
   .contenedor-navegacion{
     position:relative;
@@ -34,9 +49,18 @@ body{
   color: var(--blanco);
   background-color:rgba(2, 42, 40, 0.988);
   z-index: 5;
-  height: 5rem;
+  height: 3rem;
   top: 0;
   position: fixed;
+}
+.contenido-navegacion:hover{
+  background-color: rgb(16, 152, 145);
+}
+.menu{
+  display: none;
+}
+.contenido-navegacion a{
+  text-decoration: none;
 }
 .logo{
   display: flex;
@@ -51,6 +75,7 @@ body{
 .logo img{
   width:15%;
   height:15%;
+  padding: 0.2rem;
 }
 .navegacion{
   position: relative;
@@ -60,7 +85,7 @@ body{
   display: inline;
   color: white;
   font-size: 1.1rem;
-  padding: 1rem 1rem;
+  padding: 0.8rem 0.8rem;
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
 }
@@ -72,20 +97,20 @@ body{
 
 /*main*/
 main{
-  background-color: rgb(7, 108, 103);
+  background-color: rgb(16, 152, 145);
   height: 40rem;
   padding-bottom: 2rem;
 }
 
 .presentacion h2{
   font-family: var(--titulos);
-  color: white;
+  color: rgb(252, 252, 252);
   text-align: center;
   font-size: 2.5rem;
   padding-top: 6rem;
-  animation:titulo-h2 5s ease-in-out;
+  animation:presentacion-h2 5s ease-in-out;
 }
-@keyframes titulo-h2 {
+@keyframes presentacion-h2 {
   0%{
     transform: translateY(-30%);
     opacity: 0;
@@ -99,6 +124,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 .comprar h3{
   font-size: 1.2rem;
@@ -115,7 +141,7 @@ main{
     opacity: 1;
   }
 }
-.comprar .icon{
+.icon{
   width:3rem;
   height:3rem;
   border-radius:50%;
@@ -125,18 +151,29 @@ main{
   font-size: 3rem;
   background-color: white;
   box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.45);
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out,color 0.5s ease-in-out;
   margin-left: 0.3rem;
+  animation: icon 5s ease-in-out;
   }
-  .comprar .icon:hover{
-    background-color:rgba(2, 42, 40, 0.988) ;
-    color: white;
+  @keyframes icon {
+    0%{
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0%);
+      opacity: 1;
+    }
   }
-  .comprar a .material-symbols-outlined{
-    color: rgba(2, 42, 40, 0.988);
+  .icon:hover {
+  color: white;
+  background-color:rgba(2, 42, 40, 0.988) ;
+  }
+  .material-symbols-outlined{
+    color:rgba(2, 42, 40, 0.988) ;
     font-size: 1.6rem;
   } 
-  .comprar a .material-symbols-outlined:hover{
+ .material-symbols-outlined:hover{
     color: white;
   }
 
@@ -213,16 +250,181 @@ hr{
   margin-bottom: 1rem;
 }
 
-/* Formas de Pago */
+/*comentarios*/
+.comentarios{
+  background-color: rgb(16, 152, 145);
+  padding: 4rem 0;
+  position: relative;
+}
+.comentarios h2{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.contenedor-comentarios{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.comentario{
+  width: 18rem;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+.imagen-comentario img{
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+.imagen-comentario:hover img{
+  border-radius: 8px;
+  transform: scale(1.1);
+}
+.contenido-comentario{
+  background-color: rgb(7, 151, 144);
+  color: white;
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgb(7, 151, 144);
+}
+.contenido-comentario:hover{
+  background-color: rgb(255, 255, 255);
+  color:  rgb(7, 151, 144);
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.contenido-comentario:hover .rating{
+  color: rgb(23, 22, 22);
+}
+.experiencia  {
+display: flex;
+flex-direction: column;
+}
+.experiencia a{
+  width: 100%;
+  font-size: 1.2rem;
+  color: white;
+}
+.experiencia:hover a{
+  color: rgb(5, 49, 246);
+}
+.experiencia span{
+  padding-left: 5rem;
+}
+.experiencia:hover span{
 
+ color:white;
+}
+
+
+/* Contacto */
+#contacto {
+  padding: 1.8rem;
+  background-image: url('../imgs/reloj-casio1.webp');
+  background-size: cover;
+  background-position: center center;
+}
+#contacto h2{
+  margin: 2rem 0;
+ text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+.contenedor-contacto{
+display: flex;
+
+}
+.formulario-contacto, #mapa {
+  flex:0 0 calc(50%-1rem);
+}
+#mapa{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(69, 80, 200, 0.407);
+  padding: 3rem; 
+  margin-left: 7rem;
+}
+
+ #mapa iframe {
+  width: 100%;
+ border: none;
+  border-radius: 5px;
+}
+#mapa h3{
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  color: white;
+}
+.formulario-contacto{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15rem;
+  background-color: rgba(69, 80, 200, 0.407);
+  padding: 3rem;
+}
+
+.formulario-contacto h3{
+  color: white;
+}
+
+.formulario1 {
+  opacity: 1;
+  width: 100%;
+  margin: 0 3rem;
+  margin-top: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+ 
+}
+form label{
+  margin-top: 1rem;
+}
+input, textarea {
+  width: 100%;
+  padding: .8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline:none;
+  resize: none;
+}
+.formulario-contacto form button{
+  padding: .8rem;
+  background-color: rgba(2, 42, 40, 0.988);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  outline:none;
+}
+.formulario-contacto form button:hover {
+  background-color:  white ;
+  color:rgba(2, 42, 40, 0.988);
+}
+/* Metodos de Pago */
 #formas-pago {
-  background-color: rgb(7, 108, 103);
-
-
+  background-color: rgb(16, 152, 145);
 }
 #formas-pago h2 {
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 4rem ;
   font-size: 2rem;
   color:white;
 
@@ -247,86 +449,13 @@ hr{
   color: rgba(2, 42, 40, 0.988); 
 
 }
-/* Formulario de Contacto */
-#contacto {
-  padding: 1.8rem;
-  background-image: url('../imgs/reloj-casio1.webp');
-  background-size: cover;
-  background-position: center center;
-}
-#contacto h2{
-  padding-top: 2rem;
-  text-align: center;
-  font-size: 2rem;
-  color: white;
-}
-.contenedor-form{
-display: flex;
-}
-.formulario-contacto, #mapa {
-  flex:0 0 calc(50%-1rem);
-}
-.formulario-contacto{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 15rem;
-}
-.formulario-contacto h3{
-  color: white;
-  margin-top: 1.6rem;
-
-}
-form {
-  opacity: 1;
-  width:20rem;
-  margin: 0 auto;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  padding: 2rem;
-}
-input, textarea {
-  padding: .8rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline:none;
-  resize: none;
-}
-button {
-  padding: .8rem;
-  background-color: rgba(2, 42, 40, 0.988);
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  outline:none;
-}
-#mapa{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 7rem;
-}
- #mapa iframe {
-  width: 100%;
- border: none;
-  border-radius: 5px;
-}
-#mapa h3{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  color: white;
-}
 
 /* Tarjetas de Productos */
 #productos {
- padding:2rem 0;
- background-color: rgb(7, 108, 103);
+ padding-top:2rem ;
+ padding-bottom: 4rem;
+ background-color: rgb(16, 152, 145);
+
 }
 #productos h2{
   text-align: center;
@@ -343,7 +472,7 @@ button {
 
 .tarjeta {
   width: 18rem;
-  padding: 1.2rem;
+  padding: 1.5rem;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -353,20 +482,27 @@ button {
 .tarjeta img {
   width: 100%;
   border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
 }
-
+.tarjeta:hover img{
+  transform: scale(1.1);
+}
 .tarjeta h3 {
-  margin: 10px 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
   color: #333;
 }
 
 .tarjeta p {
   color: #666;
 }
-button[type="submit"]{
+ button[type="submit"]{
   margin-top: .8rem;
+  border: 1px solid rgba(2, 42, 40, 0.988);
+  font-weight: bold;
+
 }
-button:hover[type="submit"]{
+ button:hover[type="submit"]{
   background-color:white;
   color: rgba(2, 42, 40, 0.988); 
 }
@@ -376,37 +512,29 @@ button:hover[type="submit"]{
   background-size: cover;
   background-position: center center;
   color:white;
- padding-top: 1rem;
+  padding: 2rem;
+  height: 90vh;
 }
 .contenedor-pie{
   display: flex;
   justify-content: space-between;
+  text-align: center;
+  
 }
 
 .info{
   flex: 0 0 calc(25% - 1rem);
-}
-.info input{
-  display: block;
-}
-.info input[type="email"]{
-  outline:none;
-  width: 100%;
-  padding: .8rem 1rem;
-  margin: 1rem 0;
-  font-size: 1rem;
-}
-.info form input[type="submit"]{
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  background-color:rgba(2, 42, 40, 0.988);
-  color: white;
-  
-}
-.info form input:hover[type="submit"]{
-  background-color:white;
-  color: rgba(2, 42, 40, 0.988); 
+  background-color: rgba(69, 80, 200, 0.407);
+  height: 80vh;
 
+}
+.info .redes{
+  padding: 3rem;  
+}
+.info .redes:hover{
+  background-color: rgba(8, 246, 222, 0.407);
+  cursor:pointer;
+  height: 80vh;
 }
 .redes h3{
   text-align: center;
@@ -418,17 +546,82 @@ button:hover[type="submit"]{
   padding: 0.8rem;
   margin-top: 1rem;
   
-} 
+}
+.info .dias-especiales{
+  padding-top: 3rem;
+}
+.info:hover .dias-especiales{
+  background-color: rgba(8, 246, 222, 0.407);
+  cursor:pointer;
+  height: 80vh;
+}
+.info .horarios{
+  padding-top: 3rem;
+}
+.info:hover .horarios{
+  background-color: rgba(8, 246, 222, 0.407);
+  cursor:pointer;
+  height: 80vh;
+}
+.info .suscripcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+.info:hover .suscripcion{
+  background-color: rgba(8, 246, 222, 0.407);
+  cursor:pointer;
+
+}
+.info .suscripcion .noticias {
+  padding-top: 3rem;
+}
+
+.info input{
+  display: block;
+  outline:none;
+  width: 90%;
+  padding: .8rem 1rem;
+  margin: 1rem;
+  font-size: 1rem;
+}
+.info form input[type="submit"]{
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color:rgba(2, 42, 40, 0.988);
+  color: white;
+  border: 1px solid rgba(2, 42, 40, 0.988);
+  
+}
+.info form input:hover[type="submit"]{
+  background-color:white;
+  color: rgba(2, 42, 40, 0.988); 
+
+}
+ 
 .facebook {
-  color: blue;
+  color: rgb(6, 6, 250);
   font-size: 2.5rem;
+}
+.facebook ion-icon:hover{
+  color: rgb(0, 115, 255); 
 }
 .instagram{
   color: rgb(255, 0, 111);
   font-size: 2.5rem;
 }
+.instagram ion-icon:hover{
+  color: rgba(251, 3, 110, 0.635);
+  font-size: 2.5rem;
+}
 .twitter{
   color: rgb(248, 247, 248);
+  font-size: 2.5rem;
+}
+.twitter ion-icon:hover{
+  color: rgb(198, 195, 198);
   font-size: 2.5rem;
 }
 
@@ -440,17 +633,16 @@ button:hover[type="submit"]{
  justify-content: space-around;
  align-items: center;
 }
-
+.footer:hover{
+  background-color: rgb(16, 152, 145); 
 }
+}
+
 /* CSS Responsive para Móviles */
 @media (max-width: 768px) {
    /* Contenedor de Navegación */
    .contenedor-navegacion {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(2, 42, 40, 0.988);
-    z-index: 10;
+   position: relative;
   }
 
   .contenido-navegacion {
@@ -459,12 +651,27 @@ button:hover[type="submit"]{
     align-items: center;
     padding: 1rem;
     color: var(--blanco);
-    height: 7rem;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(2, 42, 40, 0.985);
+    z-index: 10;
+  }
+  .contenido-navegacion:hover{
+    background-color: rgb(16, 152, 145);
+  }
+  .menu {
+    margin-right: 1rem;
   }
   .navegacion{
+    display: none;
     position:absolute;
     width: auto;
     top: 80px;
+  }
+  .contenido-navegacion a{
+    text-decoration: none;
   }
   .navegacion a{
     display: inline;
@@ -479,27 +686,23 @@ button:hover[type="submit"]{
     background-color:white;
     color: rgba(2, 42, 40, 0.988); 
   }
- 
   .logo {
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
     color: white;
   }
-
   .logo img {
-    width: 25%;
+    width: 15%;
     height: auto;
+    margin-top: 1.5rem;
     margin-bottom: 0.5rem;
   }
   .logo h1{
-    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-left:5rem;
   }
-  .icono{
-    display: unset;
-    color: white;
-    font-size: 2rem;
-  }
+ 
   .video video {
     width: 100%; 
     max-width: 500px; 
@@ -510,10 +713,10 @@ button:hover[type="submit"]{
   color: white;
   text-align: center;
   font-size: 2.5rem;
-  margin-top:5rem;
-  animation:titulo-h2 5s ease-in-out;
+  margin-top:2rem;
+  animation:presentacion-h2 5s ease-in-out;
 }
-@keyframes titulo-h2 {
+@keyframes presentacion-h2 {
   0%{
     transform: translateY(-30%);
     opacity: 0;
@@ -543,21 +746,23 @@ button:hover[type="submit"]{
     opacity: 1;
   }
 }
-.icono .material-symbols-outlined{
-  color: rgb(242, 255, 0);
-  font-size: 2rem;
-  margin: 0 0.5rem;
-  transition:color 0.3s ease-in-out;
-}
-
- .icono .material-symbols-outlined:hover{
-  color: rgb(64, 255, 0);
-  font-size: 2rem;
-}
+.icon{
+  animation: icon 5s ease-in-out;
+  }
+  @keyframes icon {
+    0%{
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
   /* Main */
  main {
     padding: 2rem 1rem;
-    background-color: rgb(7, 108, 103);
+    background-color: rgb(16, 152, 145);
   }
 
  .presentacion h2 {
@@ -629,18 +834,97 @@ button:hover[type="submit"]{
  .marcas a {
     color: rgb(251, 252, 253);
     font-size: 1rem;
-    padding: 1rem 1rem;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
     display: inline-block;
   }
+  .marcas a:hover{
+    background-color:white;
+    color: rgba(2, 42, 40, 0.988); 
+  }
+ 
+  /* Contacto */
+  #contacto {
+    padding: 1.5rem;
+    background-image: url('../imgs/reloj-casio1.webp');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+  }
 
-/* Formas de Pago */
+  .contenedor-contacto {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .formulario-contacto, #mapa {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  #mapa {
+    margin-left: 0;
+    width: 100%;
+    color: white;
+    background-color: rgba(69, 80, 200, 0.407); 
+    padding: 2rem;
+  }
+  #mapa:hover{
+    background-color: rgba(8, 246, 222, 0.407);
+    cursor:pointer;
+  }
+  #mapa h3{
+  margin-bottom: 1rem;
+  }
+  .formulario-contacto{
+    background-color: rgba(69, 80, 200, 0.407); 
+    padding: 2rem;
+  }
+  .formulario-contacto:hover{
+    background-color: rgba(8, 246, 222, 0.407);
+    cursor:pointer;
+  }
+  .formulario-contacto h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .formulario1 {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    outline: none;
+  }
+
+  .formulario-contacto form button[type="submit"]{
+    margin-top: .8rem;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgba(2, 42, 40, 0.988);
+    color: rgb(253, 252, 252);
+    font-size: 1rem;
+    border: 1px solid white;
+  }
+  .formulario-contacto form button:hover[type="submit"]{
+    background-color:white;
+    color: rgba(2, 42, 40, 0.988); 
+  }
+ 
+  /* Formas de Pago */
 #formas-pago {
-  background-color: rgb(7, 108, 103);
-
+  background-color: rgb(11, 129, 123);
 }
 #formas-pago h2 {
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 5rem;
   font-size: 2rem;
   color:white;
 
@@ -667,68 +951,7 @@ button:hover[type="submit"]{
   color: rgba(2, 42, 40, 0.988); 
 
 }
- 
-  /* Formulario de Contacto */
-  #contacto {
-    padding: 1.5rem;
-    background-image: url('../imgs/reloj-casio1.webp');
-    background-size: cover;
-    background-position: center center;
-    color: white;
-    text-align: center;
-  }
 
-  .contenedor-form {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .formulario-contacto, #mapa {
-    width: 100%;
-    margin: 1rem 0;
-  }
-
-  .formulario-contacto h3 {
-    color: white;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  form {
-    width: 100%;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0.5rem;
-  }
-
-  input, textarea {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 0.5rem;
-  }
-
-  button {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: rgba(2, 42, 40, 0.988);
-    color: white;
-    font-size: 1rem;
-  }
-  button[type="submit"]{
-    margin-top: .8rem;
-  }
-  button:hover[type="submit"]{
-    background-color:white;
-    color: rgba(2, 42, 40, 0.988); 
-  }
-  #mapa {
-    margin-left: 0;
-    width: 100%;
-    color: white;
-  }
-  #mapa h3{
-  margin-bottom: 1rem;
-  }
   /* Tarjetas de Productos */
   #productos {
     padding: 2rem 1rem;
@@ -747,22 +970,36 @@ button:hover[type="submit"]{
   .tarjeta {
     width: 100%;
     background-size: cover;
-    padding: 1rem;
+    padding: 2.5rem;
     background-color: white;
     border-radius: 0.5rem;
     text-align: center;
     margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
   }
   .tarjeta img{
     width: 100%;
   }
-
+  .tarjeta:hover img{
+    transform: scale(1.1);
+  }
   .tarjeta h3 {
+    margin-top: 1.8rem;
+    margin-bottom: 0.5rem;
     color: #333;
   }
 
   .tarjeta p {
     color: #666;
+  }
+  button[type="submit"]{
+    margin-top: .8rem;
+    border: 1px solid rgba(2, 42, 40, 0.988);
+    font-weight: bold;
+  }
+   button:hover[type="submit"]{
+    background-color:white;
+    color: rgba(2, 42, 40, 0.988); 
   }
 
   /* Pie de Página */
@@ -777,9 +1014,34 @@ button:hover[type="submit"]{
   .contenedor-pie {
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    gap: 1rem;
   }
-  /*info redes*/
+
+  .contenedor-pie .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.8rem;
+  }
+  .contenedor-pie .info .suscripcion{
+    text-align: center;
+  }
+  .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .info .redes{
+    width: 28rem;
+    background-color: rgba(69, 80, 200, 0.407);
+    padding: 1rem 0;
+  }
+  .info:hover .redes{
+    background-color: rgba(8, 246, 222, 0.407);
+    cursor:pointer;
+  }
   .redes{
     display:flex;
     flex-direction: column;
@@ -790,38 +1052,80 @@ button:hover[type="submit"]{
 .redes h3{
   text-align: center;
 }
-  .facebook {
-    color: blue;
-    font-size: 2.5rem;
-    margin: 1rem;
+.facebook {
+  color: rgb(6, 6, 250);
+  font-size: 2.5rem;
+  margin: 0 1rem;
+}
+.facebook ion-icon:hover{
+  color: rgb(0, 115, 255); 
+}
+.instagram{
+  color: rgb(255, 0, 111);
+  font-size: 2.5rem;
+}
+.instagram ion-icon:hover{
+  color: rgba(251, 3, 110, 0.635);
+  font-size: 2.5rem;
+}
+.twitter{
+  color: rgb(248, 247, 248);
+  font-size: 2.5rem;
+}
+.twitter ion-icon:hover{
+  color: rgb(198, 195, 198);
+  font-size: 2.5rem;
+}
+  .info .dias-especiales{
+    width: 28rem;
+    background-color: rgba(69, 80, 200, 0.407);
+    padding: 2rem 0;
   }
-  .instagram{
-    color: rgb(255, 0, 111);
-    font-size: 2.5rem;
+  .info:hover .dias-especiales{
+    background-color: rgba(8, 246, 222, 0.407);
+    cursor:pointer;
   }
-  .twitter{
-    color: rgb(248, 247, 248);
-    font-size: 2.5rem;
-  }
-  .contenedor-pie .info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 2rem;
-  }
-  .contenedor-pie .info .suscripcion{
+  .dias-especiales h3{
     text-align: center;
   }
-  .info{
-    display: flex;
-    flex-direction: column;
+  .dias-especiales p{
+    text-align: center;
   }
-  .info h3{
-    margin-bottom: 0.7rem;
+  .info .horarios {
+    width: 28rem;
+    background-color: rgba(69, 80, 200, 0.407);
+    padding: 2rem 0;
   }
-  .info form{
+  .info:hover .horarios {
+    background-color: rgba(8, 246, 222, 0.407);
+    cursor:pointer;
+  }
+  .horarios h3{
+    text-align: center;
+  }
+  .horarios p{
+    text-align: center;
+  }
+ 
+  .info .suscripcion{
+    width: 28rem;
+    background-color: rgba(69, 80, 200, 0.407);
+    padding: 2rem;
+  }
+  .noticias h3{
+    text-align: center;
+  }
+  .info .suscripcion form{
+    width: 100%;
     margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
   }
+  .info:hover .suscripcion{
+    background-color: rgba(8, 246, 222, 0.407);
+    cursor:pointer;
+  } 
   .info form input{
     outline: none;
     margin-top: 0.8rem;
@@ -830,16 +1134,19 @@ button:hover[type="submit"]{
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 0.5rem;
+  
   }
 
   .info form input[type="submit"] {
-    background-color: rgba(2, 42, 40, 0.988);
+    background-color: rgb(2, 42, 40);
     color: white;
     width: 100%;
     padding: 0.8rem;
     margin-top: 0.5rem;
     font-size: 1rem;
     font-weight: bold;
+    border: 1px solid rgba(2, 42, 40, 0.988);
+  
     
   }
   .info form input:hover[type="submit"]{
@@ -854,6 +1161,9 @@ button:hover[type="submit"]{
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .footer:hover{
+    background-color: rgb(16, 152, 145);
   }
   .footer p{
     text-align: center;

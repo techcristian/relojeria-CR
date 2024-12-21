@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de compras</title>
+    <!--iconos font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--Css Externo-->
+    <link rel="stylesheet" href="Css/estilos.css" />
+  </head>
+  <body>
+    <!-- Tarjetas de Productos -->
+    <div class="envoltorio-carrito">
+      <aside>
+        <header>
+          <h1 class="logo-carrito">Relojeria-CR</h1>
+        </header>
+        <nav>
+          <ul class="menu-productos">
+            <li>
+              <a class="boton-menu boton-volver" href="./index.html#productos"
+                ><i class="fa-solid fa-arrow-left"></i> Seguir comprando
+              </a>
+            </li>
+            <li>
+              <a class="boton-menu active boton-carrito" href="./carrito.html"
+                ><i class="carrito-shop fa-solid fa-cart-shopping"></i> Carrito
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <footer class="texto-footer-productos">
+          <p>© 2024 Cristian Ramat</p>
+        </footer>
+      </aside>
+      <main class="main-productos">
+        <hr />
+        <h2 class="titulo-principal">Carrito</h2>
+        <hr />
+        <div class="contenedor-carrito">
+          <p id="carrito-vacio" class="carrito-vacio disabled">
+            Tu carrito se encuentra vacio
+            <i class="fa-regular fa-face-frown"></i>
+          </p>
+          <div id="carrito-productos" class="carrito-productos disabled">
+            <!-- contendor cargado desde carrito.js -->
+   
+          </div>
+    
+          <div id="carrito-acciones" class="carrito-acciones disabled">
+            <div class="carrito-acciones-subtotal">
+              <p>Subtotal:</p>
+              <p id="sub-total">$67500</p>
+            </div>
+            <div class="carrito-acciones-total">
+              <p>Total:</p>
+              <p id="total">$67500</p>
+            </div>
+            <div class="carrito-botones-acciones">
+              <button id="comprar-carrito" class="carrito-acciones-comprar">
+                Finalizar Compra
+              </button>
+              <button id="vaciar-carrito" class="carrito-acciones-vaciar">Vaciar carrito</button>
+            </div>
+          </div>
+        
+          <p id="carrito-comprado" class="carrito-comprado disabled">
+            Muchas gracias por tu compra
+            <i class="fa-regular fa-face-smile"></i>
+          </p>
+        </div>
+      </main>
+    </div>
+    <script src="carrito.js"></script>
+  </body>
+</html>

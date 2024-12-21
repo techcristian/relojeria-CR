@@ -52,7 +52,7 @@
             </div>
           </a>
           <nav class="navegacion">
-            <a href="#comentarios">Comentarios</a>
+            <a href="#comentarios">Sobre Nosotros</a>
             <a href="#contacto">Contacto</a>
             <a href="#formas-pago">Metodos de Pago</a>
             <a href="#productos">Productos</a>
@@ -97,11 +97,8 @@
                 target="_blank"
                 >Seiko</a
               >
-              <a href="https://citizen.es/" target="_blank">Citizen</a>
-              <a href="https://www.gucci.com/gr/en_gb/" target="_blank"
-                >Gucci</a
-              >
-              <a href="https://guesswatches.com/es" target="_blank">Guess</a>
+           
+         
             </ul>
             <div class="video">
               <video autoplay loop muted controls>
@@ -267,64 +264,65 @@
       </div>
     </section>
     <!-- Tarjetas de Productos -->
-    <section id="productos" id="productos">
-      <h2>Relojes Disponibles</h2>
-      <div class="tarjetas">
-        <div class="tarjeta">
-          <img src="imgs/pexels-rubaitulazad-10414755.jpg" alt="Reloj 1" />
-          <h3>Rolex Clásico</h3>
-          <p>$75.000</p>
-          <button type="submit">Comprar</button>
-        </div>
-        <div class="tarjeta">
-          <img src="imgs/reloj-rolex2.webp" alt="Reloj 2" />
-          <h3>Rolex Deportivo</h3>
-          <p>$90.000</p>
-          <button type="submit">Comprar</button>
-        </div>
-        <div class="tarjeta">
-          <img src="imgs/reloj-rolex3.webp" alt="Reloj 3" />
-          <h3>Rolex de Lujo</h3>
-          <p>$150.000</p>
-          <button type="submit">Comprar</button>
-        </div>
-        <div class="tarjeta">
-          <img src="imgs/reloj-casio1.webp" alt="Reloj 1" />
-          <h3>Casio Clásico</h3>
-          <p>$60.000</p>
-          <button type="submit">Comprar</button>
-        </div>
-        <div class="tarjeta">
-          <img src="imgs/reloj-casio2.webp" alt="Reloj 2" />
-          <h3>Casio Deportivo</h3>
-          <p>$70.000</p>
-          <button type="submit">Comprar</button>
-        </div>
-        <div class="tarjeta">
-          <img src="imgs/reloj-casio3.webp" alt="Reloj 3" />
-          <h3>Casio de Lujo</h3>
-          <p>$120.000</p>
-          <button type="submit">Comprar</button>
-        </div>
-        <div class="tarjeta">
-          <img src="imgs/reloj-seiko1.webp" alt="Reloj 1" />
-          <h3>Seiko Clásico</h3>
-          <p>$60.000</p>
-          <button type="submit">Comprar</button>
-        </div>
-        <div class="tarjeta">
-          <img src="imgs/reloj-seiko2.webp" alt="Reloj 2" />
-          <h3>Seiko Deportivo</h3>
-          <p>$70.000</p>
-          <button type="submit">Comprar</button>
-        </div>
-        <div class="tarjeta">
-          <img src="imgs/reloj-seiko3.webp" alt="Reloj 3" />
-          <h3>Seiko de Lujo</h3>
-          <p>$120.000</p>
-          <button type="submit">Comprar</button>
-        </div>
-      </div>
+
+    <section class="envoltorio" id="productos">
+      <aside>
+        <header>
+          <h2 class="logo-carrito">Relojeria-CR</h2>
+        </header>
+        <nav>
+          <ul class="menu-productos">
+            <li>
+              <buton id="todos" class="boton-menu boton-categoria active "
+                ><i class="mano-up-llena fa-solid fa-hand-point-up"></i> Todos
+                los Relojes</buton
+              >
+            </li>
+            <li>
+              <buton id="Rolex" class="boton-menu boton-categoria"
+                ><i class="mano-up-llena fa-solid fa-hand-point-up"></i>
+                Rolex</buton
+              >
+            </li>
+            <li>
+              <buton id="Casio" class="boton-menu boton-categoria"
+                ><i class="mano-up-llena fa-solid fa-hand-point-up"></i>
+                Casio</buton
+              >
+            </li>
+            <li>
+              <buton id="Zenith" class="boton-menu boton-categoria"
+                ><i class="mano-up-llena fa-solid fa-hand-point-up"></i>
+                Zenith</buton
+              >
+            </li>
+            <li>
+              <buton id="Seiko" class="boton-menu boton-categoria"
+                ><i class="mano-up-llena fa-solid fa-hand-point-up"></i>
+                Seiko</buton
+              >
+            </li>
+          
+            <li>
+              <a class="boton-menu boton-carrito" href="./carrito.html"
+                ><i class="carrito-shop fa-solid fa-cart-shopping"></i>Ir Carrito
+                <span id="numerito" class="numerito">0</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <footer class="texto-footer-productos">
+          <p>© 2024 Cristian Ramat</p>
+        </footer>
+      </aside>
+      <main class="main-productos">
+        <hr />
+        <h3 class="titulo-principal" id="titulo-principal">Todos los relojes</h3>
+        <hr />
+        <div id="contenedor-productos" class="productos">
+         <!--contenedor de productos que se rellena desde javascript-->
+       </div>
+      </main>
     </section>
 
     <!--pie de pagina-->
@@ -399,7 +397,7 @@
         Imagenes libre de derechos.
       </p>
     </footer>
-
+    <script src="index.js"></script>
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"

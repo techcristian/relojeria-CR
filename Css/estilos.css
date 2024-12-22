@@ -1025,29 +1025,26 @@ justify-content: center;
 @media (max-width: 768px) {
   .contenedor-navegacion{
     position:relative;
+ 
   }
 .contenido-navegacion{
   position: relative;
-
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: left;
   color: var(--blanco);
   background-color:rgba(27, 2, 68, 0.988);
-  z-index: 5;
+  z-index: 15;
   height: 3rem;
   top: 0;
-  position: fixed;
+  position:fixed;
+ 
 }
 .contenido-navegacion:hover{
   background-color: rgb(63, 14, 149);
 }
-.menu{
-  margin-right: 5rem;
-}
-.contenido-navegacion a{
-  text-decoration: none;
-}
+
 .logo{
   display: flex;
   justify-content:left;
@@ -1060,19 +1057,31 @@ justify-content: center;
   font-size: 1.4rem;
 }
 .logo img{
-  width:15%;
-  height:15%;
+  width:10%;
+  height:10%;
   padding: 0.2rem;
 }
+.menu{
+display: flex ;
+justify-content: right;
+align-items: center;
+margin-right: 50rem;
+position: absolute;
+top: 1rem;
+right: 0;
+}
 .navegacion{
-display: none;
-  position: relative;
+  display: flex;
+  position: absolute;
+  display: none;
   width: auto;
 }
 .navegacion a{
+
+  text-decoration: none;
   display: inline;
-  color: white;
-  font-size: 1.1rem;
+  color: rgb(249, 3, 3);
+  font-size: 0.5rem;
   padding: 0.8rem 0.8rem;
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;

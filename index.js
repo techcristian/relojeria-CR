@@ -128,7 +128,41 @@ const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar;
 const numerito = document.querySelector("#numerito");
 
-/*funciones*/
+const hamburguesa = document.querySelector(".menu");
+const enlaces = document.querySelectorAll(".navegacion a");
+
+/* funciones */
+
+function mostrarMenu() {
+  hamburguesa.addEventListener("click", () => {
+    document.querySelector(".navegacion").classList.toggle("ocultar");
+  });
+}
+mostrarMenu();
+
+function cerrarMenu() {
+  enlaces.forEach(enlace => {
+    enlace.addEventListener("click", (e) => {
+      e.preventDefault();
+      const seccion = document.querySelector(e.target.attributes.href.value);
+      console.log(seccion);
+      cambioSeccion(seccion);
+
+      if (e.target.tagName === "A") {
+        document.querySelector(".navegacion").classList.add("ocultar");
+      }
+    });
+  });
+}
+cerrarMenu();
+
+/* función scroll navegación */
+function cambioSeccion(seccion) {
+  seccion.scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
 /*funcion que crea cada tarjeta de productos*/
 function cargarProductos(productosElegidos) {
   contenedorProductos.innerHTML = "";

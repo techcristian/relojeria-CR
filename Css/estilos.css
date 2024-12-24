@@ -91,7 +91,6 @@ button{
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
 }
-
 .navegacion a:hover{
   background-color:white;
   color: rgba(27, 2, 68, 0.988); 
@@ -477,7 +476,14 @@ input, textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+li{
+  list-style: none;
+}
+li .boton-ir-carrito{
+  text-decoration: none;
+  color:rgb(250, 252, 252);
 }
 .main-productos {
  height: unset;
@@ -494,13 +500,7 @@ input, textarea {
   font-size: 1.6rem;
   transform: translateY(-0.5rem);
  }
-li{
-  list-style: none;
-}
-li .boton-carrito{
-  text-decoration: none;
-  color:rgb(250, 252, 252);
-}
+
 .productos{
   display: grid;
   grid-template-columns: repeat(3,1fr);

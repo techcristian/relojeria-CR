@@ -127,7 +127,7 @@ const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar;
 const numerito = document.querySelector("#numerito");
-
+/*variables de menu principal mobil*/
 const hamburguesa = document.querySelector(".menu");
 const enlaces = document.querySelectorAll(".navegacion a");
 
@@ -254,5 +254,10 @@ function actualizarNumerito() {
  let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
   numerito.innerText = nuevoNumerito;
 }
+
+/*mobil de carrito index
+ */
+
+
 
 /*   <button class="producto-comprar" type="submit" id=${producto.id}>Comprar</button>*/

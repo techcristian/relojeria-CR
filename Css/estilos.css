@@ -242,7 +242,6 @@ box-shadow: 0.2rem -0.1rem 10px rgb(59, 57, 57);
     opacity: 1;
   }
 }
-
 .marcas a{
   display: block;
   font-family: var(--parrafos);
@@ -269,7 +268,6 @@ hr{
 }
 
 /*comentarios*/
-
 .comentarios{
   background-color: rgb(63, 14, 149);
   padding: 4rem 0;
@@ -346,7 +344,6 @@ flex-direction: column;
 
  color:white;
 }
-
 
 /* Contacto */
 #contacto {
@@ -512,7 +509,6 @@ li .boton-ir-carrito{
   font-size: 1.6rem;
   transform: translateY(-0.5rem);
  }
-
 .productos{
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -537,7 +533,6 @@ li .boton-ir-carrito{
   transition: transform 0.3s ease-in-out;
   margin-bottom: 0.7rem;
 }
-
 .producto img:hover{
   transform: scale(1.1);
 }
@@ -565,7 +560,7 @@ li .boton-ir-carrito{
   text-decoration: line-through;
   color: gray;
   font-size: 1rem;
-  font-size: 1.1rem;
+  
 }
 .contenedor-descuento{
   display: flex;
@@ -587,6 +582,7 @@ align-items: center;
   color: rgb(34, 34, 34);
   font-weight: bold;
   font-size: 1.5rem;
+  transform: translateY(-1rem);
 }
 .producto-agregar{
   width: unset;
@@ -600,6 +596,7 @@ align-items: center;
   font-weight: bold;
   border-radius: 0.3rem;
   border: 1px solid rgb(63, 14, 149);
+  transform: translateY(-2rem);
   transition: 0.3s ease-in-out;
 }
 .producto-agregar:hover{
@@ -1641,12 +1638,13 @@ li .boton-carrito{
   background-color: white;
   border-radius: 0.5rem;
   position: relative;
-  margin-top: -2rem;
+  margin-top: 0rem;
   display: flex;
   flex-direction: column;
   gap:1rem;
   border: 1px solid rgb(211, 207, 207);
   transition: 0.3s ease-in-out;
+  transform: translateY(-2rem);
 }
 .producto-detalles:hover{
   box-shadow: 0 5px 10px rgb(141, 138, 138);
@@ -1682,6 +1680,7 @@ align-items: center;
   color: rgb(34, 34, 34);
   font-weight: bold;
   font-size: 1.5rem;
+  transform: translateY(-1rem);
 }
 .producto-agregar{
   width: unset;
@@ -1696,6 +1695,7 @@ align-items: center;
   border-radius: 0.3rem;
   border: 1px solid rgb(63, 14, 149);
   transition: 0.3s ease-in-out;
+  transform: translateY(-2rem);
 }
 .producto-agregar:hover{
   cursor: pointer;
@@ -1725,7 +1725,6 @@ align-items: center;
 }
 
 /*productos Carrito*/
-
 .envoltorio-carrito{
   background-color: rgb(63, 14, 149);
   padding: 2rem;

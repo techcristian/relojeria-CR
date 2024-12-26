@@ -6,6 +6,7 @@ const contenedorCarritoProductos = document.querySelector("#carrito-productos");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
 const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
 let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
+const botonComprarCarrito= document.querySelector("#comprar-carrito");   
 const botonVaciarCarrito= document.querySelector("#vaciar-carrito");
 let subTotal=document.querySelector("#sub-total");
 let total=document.querySelector("#total");
@@ -52,7 +53,7 @@ function cargarProductosCarrito(){
       </div>
       <div class="carrito-producto-subtotal">
         <small>Subtotal</small>
-        <p>${producto.precio - producto.precio*0.10}</p>
+        <p>${(producto.precio - producto.precio*0.10)*producto.cantidad}</p>
       </div>
     </div>
     <button class="carrito-producto-eliminar" id=${producto.id}>
@@ -91,7 +92,7 @@ function eliminarCarrito(e){
 
   localStorage.setItem("productos-en-carrito",JSON.stringify(productosEnCarrito));
 };
-
+/*boton vaciar carrito*/
 botonVaciarCarrito.addEventListener("click",vaciarCarrito);
 function vaciarCarrito(){
   productosEnCarrito.length=0;
@@ -100,16 +101,25 @@ function vaciarCarrito(){
 };
 
 function actualizarsubTotal(){
-  subTotal.innerText= productosEnCarrito.reduce((acc,producto)=> acc+(producto.precio-producto.precio*0.10 * producto.cantidad),0);
+  subTotal.innerText= productosEnCarrito.reduce((acc,producto)=> acc+((producto.precio-producto.precio*0.10)* producto.cantidad),0);
   
 }
 function actualizarTotal(){
-  total.innerText= productosEnCarrito.reduce((acc,producto)=> acc+(producto.precio-producto.precio*0.10 * producto.cantidad),0);
+  total.innerText= productosEnCarrito.reduce((acc,producto)=> acc+((producto.precio-producto.precio*0.10)* producto.cantidad),0);
   
 }
+/*boton comprar carrito */
+botonComprarCarrito.addEventListener("click",comprarCarrito);
+function comprarCarrito(){
+  productosEnCarrito.length=0;
+  localStorage.setItem("productos-en-carrito",JSON.stringify(productosEnCarrito));
 
+  contenedorCarritoVacio.classList.add("disabled");
+  contenedorCarritoProductos.classList.add("disabled");
+  contenedorCarritoAcciones.classList.add("disabled");
+  contenedorCarritoComprado.classList.remove("disabled");
 
-
+}
 
 
 

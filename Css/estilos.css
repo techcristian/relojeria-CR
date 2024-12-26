@@ -39,9 +39,18 @@ button{
 
 
 @media(min-width:600px){
-  .contenedor-navegacion{
-    position:relative;
-  }
+.contenedor-navegacion{
+  position:relative;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  padding: 0 2rem;
+}
+
+
+  /*
 .contenido-navegacion{
   position: relative;
   width: 100%;
@@ -94,7 +103,8 @@ button{
 .navegacion a:hover{
   background-color:white;
   color: rgba(27, 2, 68, 0.988); 
-}
+}*/
+
 
 /*main*/
 main{
@@ -1025,11 +1035,47 @@ justify-content: center;
 
 /* CSS Responsive para Móviles */
 @media (max-width: 600px) {
-
-  .contenedor-navegacion{
-    position:relative;
-    z-index: 5;
+.contenedor-navegacion{
+  position:relative;
+  z-index: 5;
+  
   }
+.navbar {
+  width: 100%;/*nabbar toma el 100% de su contenedor*/
+  position: fixed;
+  z-index: 5;
+  padding: 10px;
+}
+.navbar button{
+  margin-right: 2.5rem;
+}
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-left: 7rem;
+
+}
+
+.navbar-nav {
+  text-align: center; /* Centrar los elementos del menú */
+}
+
+.dropdown-menu {
+  font-size: 0.9rem; /* Reducir tamaño del texto del dropdown */
+  margin-right: 2.5rem;
+}
+
+.form-control {
+  width: 100%; /* Expandir el campo de búsqueda en pantallas pequeñas */
+
+}
+
+.btn {
+  width: 30%; /* Botón de búsqueda al 100% del ancho */
+}
+
+
+/*
 .contenido-navegacion{
   position: relative;
   width: 100%;
@@ -1038,7 +1084,6 @@ justify-content: center;
   justify-content: left;
   color: var(--blanco);
   background-color:rgba(27, 2, 68, 0.988);
-  z-index: 5;
   height: 3rem;
   top: 0;
   position:fixed;
@@ -1046,7 +1091,9 @@ justify-content: center;
 .contenido-navegacion:hover{
   background-color: rgb(63, 14, 149);
 }
-
+.contenido-navegacion a{
+  text-decoration: none;
+}
 .logo{
   display: flex;
   justify-content:left;
@@ -1104,7 +1151,7 @@ right: 0;
 .navegacion a:hover {
   background-color: rgb(63, 14, 149);
   color:#fefcfb;
-}
+}*/
 
 /*main*/
 main{
@@ -1240,7 +1287,6 @@ box-shadow: 0.2rem -0.1rem 10px rgb(59, 57, 57);
     opacity: 1;
   }
 }
-
 .marcas a{
   text-align: center;
   display: block;
@@ -1665,10 +1711,14 @@ align-items: center;
 .envoltorio-carrito{
   background-color: rgb(63, 14, 149);
   padding: 2rem;
+  height: 100vh;
 }
 .envoltorio-carrito aside{
   background-color: rgb(63, 14, 149);
   color: white;
+  display:flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 .logo-carrito{
   text-align: center;
@@ -1692,6 +1742,10 @@ align-items: center;
   width:80%;
   font-size: 1.1rem;
   transform: translateX(-1rem);
+ }
+ .copy{
+  text-align: center;
+  margin-top: 1rem;
  }
 .carrito-vacio{
   color:rgb(63, 14, 149);

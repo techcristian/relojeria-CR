@@ -650,14 +650,13 @@ align-items: center;
   position: relative;
 
 }
-
 .mano-up-llena{
   transform: rotateZ(90deg);
   font-size: 1rem;
 }
 .boton-carrito{
  margin-left: -1.3rem;
-  margin-top: 2rem;
+ margin-top: 2rem;
 }
 .carrito-shop{
   font-size: 1rem;
@@ -816,13 +815,13 @@ align-items: center;
 justify-content: center;
 }
 .carrito-acciones-subtotal{
-  width: 100%;
+  width: 90%;
   color: rgb(131, 126, 126);
  font-weight: bold;
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
+  
 }
 .carrito-acciones-total{
   width: 100%;
@@ -832,9 +831,9 @@ justify-content: center;
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
-  margin-top: 1rem;
- }
  
+ }
+
 .carrito-botones-acciones{
   margin-bottom: 2rem;
 }
@@ -846,19 +845,15 @@ justify-content: center;
    color: red;
    font-size: unset;
  }
- .carrito-acciones-derecha{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- }
+
  .carrito-acciones-comprar{
   border: 0;
   cursor: pointer;
   display: block;
    width: unset;
-   padding: 0.5rem 2rem;
+   padding: 0.5rem 2.2rem;
    margin: 1rem 1rem;
-   margin-top: 2rem;
+   margin-top: 0.5rem;
    text-transform: uppercase;
    background-color: rgb(63, 14, 149);
    color: rgb(254, 253, 253);
@@ -896,9 +891,10 @@ justify-content: center;
  
  }
  .boton-carrito{
-  width: 135%;
+  width: 140%;
   font-size: 1.1rem;
   padding-left: 2rem;
+  text-decoration: none;
  }
 .disabled{
   display: none;
@@ -917,7 +913,6 @@ justify-content: center;
   justify-content: space-between;
   text-align: center;
 }
-
 .info{
   flex: 0 0 calc(25% - 1rem);
   background-color: rgba(69, 80, 200, 0.407);
@@ -1170,9 +1165,7 @@ main{
   background-color: white;
   height: 40rem;
   padding-bottom: 2rem;
- 
 }
-
 .presentacion h2{
   font-family: var(--titulos);
   color: rgb(63, 14, 149);
@@ -1237,18 +1230,17 @@ main{
       opacity: 1;
     }
   }
-  .icon:hover {
+.icon:hover {
   color: white;
   background-color:rgb(233, 232, 235) ;
   }
-  .material-symbols-outlined{
+.material-symbols-outlined{
     color:rgb(246, 39, 73);
     font-size: 1.6rem;
   } 
- .material-symbols-outlined:hover{
+.material-symbols-outlined:hover{
     color: rgb(246, 39, 73);
   }
-
 .contenido-imagen-video{
   display: flex;
   flex-direction: column;
@@ -1329,14 +1321,14 @@ hr{
 /*comentarios*/
 .comentarios{
   background-color: rgb(63, 14, 149);
-  padding: 4rem 0;
+  padding: 3rem 0;
   position: relative;
-  margin-top: 13rem;
+  margin-top: 15rem;
 }
 .comentarios h2{
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: white;
 }
 .contenedor-comentarios{

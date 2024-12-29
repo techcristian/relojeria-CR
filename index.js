@@ -127,6 +127,54 @@ const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar;
 const numerito = document.querySelector("#numerito");
+// variable de contenedor-comentarios
+const contenedorComentarios = document.querySelector("#contenedor-comentarios");
+//funcion para obtener datos de una API publica
+async function fetchUsuarios(){
+    try {
+       // Realizamos la solicitud a una API pública 
+      const response = await fetch("https://jsonplaceholder.typicode.com/users");
+      if(!response.ok){
+        throw new Error("Error al obtener datos desde la API");
+      }
+      const usuariosFetch= await response.json();
+     
+      mostrarUsuarios(usuariosFetch);
+    } catch (error) {
+      contenedorComentarios.innerHTML= `<p style="color: red;">Error: ${error.message}</p>`;
+    }
+};
+// Función para mostrar los datos fetch en el HTML
+function mostrarUsuarios(usuarios){
+  contenedorComentarios.innerHTML= "";
+  usuarios.forEach((usuario)=>{
+    const comentarioUsuario= document.createElement("div");
+    comentarioUsuario.classList.add("comentario");
+    comentarioUsuario.innerHTML=`
+     
+            <div class="imagen-comentario">
+            <img src="imgs/comentario1.webp" alt="comentario 1" />
+          </div>
+          <div class="contenido-comentario">
+            <h3>${usuario.name}</h3>
+            <p>Dice:</p>
+            <p>
+              ¡Increíble servicio! Muy satisfecho con la atención y los
+              resultados. Sin duda lo recomiendo.
+            </p>
+            <div class="rating"><span class="amarillo">★★★★★</span></div>
+           </div>
+          
+    `;
+     // Agregamos cada tarjeta de usuario contenedor comentarios
+     contenedorComentarios.append(comentarioUsuario);
+  });
+
+};
+fetchUsuarios();
+
+
+
 /*variables de menu principal mobil
 const hamburguesa = document.querySelector(".menu");
 const enlaces = document.querySelectorAll(".navegacion a");

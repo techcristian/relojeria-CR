@@ -153,7 +153,7 @@ function mostrarUsuarios(usuarios){
     comentarioUsuario.innerHTML=`
      
             <div class="imagen-comentario">
-            <img src="imgs/comentario1.webp" alt="comentario 1" />
+            <img src="imgs/comentario3.webp" alt="comentario 1" />
           </div>
           <div class="contenido-comentario">
             <h3>${usuario.name}</h3>
@@ -165,7 +165,9 @@ function mostrarUsuarios(usuarios){
             <div class="rating"><span class="amarillo">★★★★★</span></div>
            </div>
           
+          
     `;
+   
      // Agregamos cada tarjeta de usuario contenedor comentarios
      contenedorComentarios.append(comentarioUsuario);
   });

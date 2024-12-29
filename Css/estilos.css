@@ -329,25 +329,19 @@ hr{
 .contenido-comentario:hover .rating{
   color: rgb(23, 22, 22);
 }
-.experiencia  {
-display: flex;
-flex-direction: column;
-}
+
 .experiencia a{
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
   font-size: 1.2rem;
   color: white;
 }
 .experiencia:hover a{
   color: rgb(5, 49, 246);
 }
-.experiencia span{
-  padding-left: 5rem;
-}
-.experiencia:hover span{
 
- color:white;
-}
 
 /* Contacto */
 #contacto {
@@ -1381,25 +1375,18 @@ hr{
 .contenido-comentario:hover .rating{
   color: rgb(23, 22, 22);
 }
-.experiencia  {
-display: flex;
-flex-direction: column;
-}
 .experiencia a{
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
   font-size: 1.2rem;
   color: white;
 }
 .experiencia:hover a{
   color: rgb(5, 49, 246);
 }
-.experiencia span{
-  padding-left: 5rem;
-}
-.experiencia:hover span{
 
- color:white;
-}
 
 /* Contacto */
 #contacto {

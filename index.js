@@ -163,9 +163,7 @@ function mostrarUsuarios(usuarios){
               resultados. Sin duda lo recomiendo.
             </p>
             <div class="rating"><span class="amarillo">★★★★★</span></div>
-           </div>
-          
-          
+           </div>    
     `;
    
      // Agregamos cada tarjeta de usuario contenedor comentarios
@@ -174,8 +172,6 @@ function mostrarUsuarios(usuarios){
 
 };
 fetchUsuarios();
-
-
 
 /*variables de menu principal mobil
 const hamburguesa = document.querySelector(".menu");

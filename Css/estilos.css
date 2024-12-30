@@ -295,10 +295,7 @@ hr{
   border-radius: 8px;
   text-align: center;
 }
-.comentario h3{
-  color: white;
-  font-size: 2rem;
-}
+
 .imagen-comentario img{
   transition: transform 0.3s ease-in-out;
   width: 100%;
@@ -328,6 +325,9 @@ hr{
 }
 .contenido-comentario:hover .rating{
   color: rgb(23, 22, 22);
+}
+.contenido-comentario:hover h3{
+  color:rgb(63, 14, 149)
 }
 
 .experiencia a{
@@ -1374,6 +1374,9 @@ hr{
 }
 .contenido-comentario:hover .rating{
   color: rgb(23, 22, 22);
+}
+.contenido-comentario:hover h3{
+  color:rgb(63, 14, 149);
 }
 .experiencia a{
   display: flex;

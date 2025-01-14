@@ -49,9 +49,6 @@ button{
   padding: 0 2rem;
 }
 
-
-
-
   /*
 .contenido-navegacion{
   position: relative;
@@ -106,8 +103,10 @@ button{
   background-color:white;
   color: rgba(27, 2, 68, 0.988); 
 }*/
-
-
+/*nav boostrap*/
+#searchInput {
+  width: 20rem;
+}
 /*main*/
 main{
   background-color: white;
@@ -312,7 +311,7 @@ hr{
   border-radius: 8px;
   margin-top: 1rem;
   padding: 1rem;
-  border: 1px solid rgb(63, 14, 149);
+
   transition: background-color 0.3s, color 0.3s ease-in-out;
 }
 .contenido-comentario:hover{
@@ -1361,7 +1360,7 @@ hr{
   border-radius: 8px;
   margin-top: 1rem;
   padding: 1rem;
-  border: 1px solid rgb(63, 14, 149);
+
   transition: background-color 0.3s, color 0.3s ease-in-out;
 }
 .contenido-comentario:hover{

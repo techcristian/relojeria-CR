@@ -302,9 +302,26 @@ function actualizarNumerito() {
   numerito.innerText = nuevoNumerito;
 }
 
-/*mobil de carrito index
- */
+//buscar marca 
+const marcas= ["Rolex","Casio","Zenith","Seiko"];
 
+function buscarMarca(marcas) {
+  document.querySelector("#searchForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Evita que la página se recargue
 
+    const query = document.querySelector("#searchInput").value.toLowerCase(); 
+    const resultado = marcas.filter((marca) =>
+      marca.toLowerCase().includes(query)
+    );
+  
+    if (resultado.length > 0) {
+      alert("Resultados encontrados: " + resultado.join(", "));
+    } else {
+      alert("No se encontraron marcas con ese término.");
+    }
+    document.querySelector("#searchInput").value = "";
+  });
+};
+buscarMarca(marcas);
 
-/*   <button class="producto-comprar" type="submit" id=${producto.id}>Comprar</button>*/
+//  <button class="producto-comprar" type="submit" id=${producto.id}>Comprar</button>*/

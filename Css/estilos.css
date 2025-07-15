@@ -1042,7 +1042,7 @@ justify-content: center;
   padding: 10px;
 }
 .navbar button{
-  margin-right: 0rem;
+  margin-right: 2.5rem;
   color: rgb(255, 255, 255);
   background-color: rgb(63, 14, 149) /* Morado personalizado */
 }
@@ -1052,7 +1052,7 @@ justify-content: center;
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-left: 9rem;
+  margin-left: 6rem;
 }
 .navbar .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");

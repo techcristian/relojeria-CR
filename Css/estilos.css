@@ -1033,6 +1033,7 @@ justify-content: center;
 .contenedor-navegacion{
   position:relative;
   z-index: 5;
+
   
   }
 .navbar {
@@ -1040,21 +1041,25 @@ justify-content: center;
   position: fixed;
   z-index: 5;
   padding: 10px;
+
 }
-.navbar button{
-  margin-right: 1rem;
-  margin-left: 1rem;
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 600;
+ margin-left: 10rem;
+
+}
+.navbar .navbar-toggler{
+margin-right: 2rem;
+margin-left: 2rem;
+ 
   color: rgb(255, 255, 255);
   background-color: rgb(63, 14, 149) /* Morado personalizado */
 }
 .navbar .custom-brand-text{
   color:rgb(63, 14, 149) ;
 }
-.navbar-brand {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-left: 6rem;
-}
+
 .navbar .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }

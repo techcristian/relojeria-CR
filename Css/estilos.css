@@ -1604,12 +1604,13 @@ li .boton-carrito{
   grid-template-columns: 1fr;
   gap: 1.7rem;
   justify-content: center;
-  padding-left: 3rem;
+ 
 }
 .producto {
   width: 18rem;
   height: 35rem;
   padding: 1.5rem;
+  margin-left: 6rem;
   background-color:rgb(252, 253, 253);
   border: 1px solid #ddd;
   border-radius: 0.5rem;

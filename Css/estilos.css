@@ -1046,7 +1046,7 @@ justify-content: center;
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: 600;
- margin-left: 10rem;
+ margin-left: 6rem;
 
 }
 .navbar .navbar-toggler{
@@ -1517,7 +1517,7 @@ input, textarea {
   display: grid;
   grid-template-columns: 1fr;
    background-color: rgb(63, 14, 149);
-  padding: 1rem;
+   padding: 1rem;
  
 }
 /*aside productos*/

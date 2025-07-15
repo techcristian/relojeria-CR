@@ -138,8 +138,10 @@ async function fetchUsuarios(){
         throw new Error("Error al obtener datos desde la API");
       }
       const usuariosFetch= await response.json();
+      const primerosUsuarios = usuariosFetch.slice(0, 3);
+
      
-      mostrarUsuarios(usuariosFetch);
+      mostrarUsuarios(primerosUsuarios);
     } catch (error) {
       contenedorComentarios.innerHTML= `<p style="color: red;">Error: ${error.message}</p>`;
     }

@@ -484,6 +484,7 @@ input, textarea {
   align-items: center;
   justify-content: space-around;
 }
+
 li{
   list-style: none;
 }
@@ -685,6 +686,9 @@ align-items: center;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+.logo-aside-carrito{
+  font-size: 2rem;
 }
 .logo-carrito{
   font-weight: 600;
@@ -1038,7 +1042,7 @@ justify-content: center;
   padding: 10px;
 }
 .navbar button{
-  margin-right: 2.5rem;
+  margin-right: 0rem;
   color: rgb(255, 255, 255);
   background-color: rgb(63, 14, 149) /* Morado personalizado */
 }
@@ -1048,7 +1052,7 @@ justify-content: center;
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-left: 6rem;
+  margin-left: 9rem;
 }
 .navbar .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -1508,18 +1512,18 @@ input, textarea {
 .envoltorio{
   display: grid;
   grid-template-columns: 1fr;
-  background-color: rgb(63, 14, 149);
+   background-color: rgb(63, 14, 149);
   padding: 1rem;
  
 }
 /*aside productos*/
  aside{
-  background-color: rgb(63, 14, 149);
+  background-color: rgb(91, 10, 231);
   color: white;
 }
 .logo-aside-carrito{
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
 }
 .menu-productos{
@@ -1574,7 +1578,7 @@ input, textarea {
  padding: 2rem 1rem;
  margin-top: 2rem;
  margin-bottom: 1rem;
- margin-left: 0px;
+ margin-left: 0rem;
  background-color: white;
  border-radius: 2rem;
  }
@@ -1596,6 +1600,7 @@ li .boton-carrito{
   grid-template-columns: 1fr;
   gap: 1.7rem;
   justify-content: center;
+  padding-left: 3rem;
 }
 .producto {
   width: 18rem;
